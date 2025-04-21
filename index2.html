@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La nueva red NSFW del mundo hispano</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --rosa: #f72585;
+      --rosa-suave: #ffb3c6;
+      --blanco: #ffffff;
+      --gris: #1a1a1a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--blanco);
+      color: var(--gris);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: var(--rosa);
+      color: white;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      animation: fadeDown 1s ease-out forwards;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      max-width: 700px;
+      margin: 0 auto;
+      animation: fadeDown 1.5s ease-out forwards;
+    }
+
+    .arrow {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: white;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+    }
+
+    @keyframes fadeDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .cta {
+      background-color: white;
+      color: var(--rosa);
+      padding: 1.2rem 2.5rem;
+      border: 2px solid white;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 2rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      animation: fadeDown 2s ease-out forwards;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      font-size: 1.1rem;
+    }
+
+    .cta:hover {
+      background-color: var(--rosa-suave);
+      color: var(--gris);
+      border-color: var(--rosa-suave);
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--rosa);
+    }
+
+    .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .grid-4-horizontal {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 1024px) {
+      .grid-4-horizontal {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-4-horizontal {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background-color: #fff0f5;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(247, 37, 133, 0.15);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card h3 {
+      color: var(--rosa);
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #ffe4ec;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: var(--gris);
+      border-top: 1px solid #ffc2d1;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal-content {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 16px;
+      max-width: 800px;
+      width: 90%;
+      position: relative;
+      animation: slideUp 0.3s ease;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #333;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>La nueva era del contenido NSFW</h1>
+  <p>La red social para descubrir, crecer y conectar. Hecha para creadoras. Pensada para fans.</p>
+  <a href="#registro" class="cta">Unirme ahora</a>
+  <div class="arrow">&#8595;</div>
+</header>
+
+<section>
+  <h2>¿Por qué elegirnos?</h2>
+  <div class="grid-4-horizontal">
+    <div class="card">
+      <h3>✨Descubrimiento Real</h3>
+      <p>Algoritmo para descubrir nuevas creadoras dentro de la plataforma. ¡El contenido se encuentra solo!</p>
+    </div>
+    <div class="card">
+      <h3>💸 Comisiones Justas</h3>
+      <p>Creadoras con más beneficios y menos comisiones. Hasta 0% para embajador@s en fase inicial.</p>
+    </div>
+    <div class="card">
+      <h3>🔥 Viralidad Orgánica</h3>
+      <p>Reels, hashtags, perfiles destacados y sistema de tendencias para impulsar tu contenido.</p>
+    </div>
+    <div class="card">
+      <h3>🏅 Gamificación</h3>
+      <p>Puntos, niveles, logros, y concursos. Interactuar y ganar es parte del juego.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Pensado para Creadoras</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🎥 Herramientas de Impacto</h3>
+      <p>Reels, livestreams, encuestas y más. Comparte y conecta de forma creativa.</p>
+    </div>
+    <div class="card">
+      <h3>🌈 Nichos & Subnichos</h3>
+      <p>Perfiles por temática: fitness, cosplay, gamer, etc. Tu comunidad ideal te encuentra.</p>
+    </div>
+    <div class="card">
+      <h3>🎉 Recompensas Reales</h3>
+      <p>Eventos, “Creadora del Mes”, colaboraciones y visibilidad premium.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Para la Comunidad</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🔍 Contenido relevante</h3>
+      <p>Una experiencia personalizada basada en intereses, interacción y reputación.</p>
+    </div>
+    <div class="card">
+      <h3>💬 Valora y Conecta</h3>
+      <p>Deja reseñas, comenta públicamente, y forma parte activa del crecimiento de tus favoritas.</p>
+    </div>
+    <div class="card">
+      <h3>🎁 Gana por Interactuar</h3>
+      <p>Conecta directamente con tus creadoras favoritas por chat privado. Cuanto más interactúas, más ventajas desbloqueas.</p>
+    </div>
+  </div>
+</section>
+
+<section id="registro" style="text-align:center;">
+  <h2>Únete antes del lanzamiento</h2>
+  <p>Acceso anticipado, beneficios únicos y la oportunidad de marcar historia en la nueva plataforma rosa.</p>
+  <button onclick="openModal()" class="cta">Pre-inscribirse</button>
+</section>
+
+<!-- Modal -->
+<div id="formModal" class="modal">
+  <div class="modal-content">
+    <button class="close" onclick="closeModal()">&times;</button>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeHkJ8ub_fPVs39DlPozqgdmSeuS5ojzhkHAEPn1mEYJFEsTA/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" style="border:none;">Cargando…</iframe>
+  </div>
+</div>
+
+<footer>
+  © 2025 NSFW Network — La nueva red social NSFW en español.
+</footer>
+
+<script>
+  function openModal() {
+    document.getElementById("formModal").style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("formModal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("formModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
