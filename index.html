@@ -4,15 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>La nueva red NSFW del mundo hispano</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+
   <style>
     :root {
-      --rosa: #f72585;
+      --fucsia: #f72585;
       --rosa-suave: #ffb3c6;
       --blanco: #ffffff;
+      --negro: #000000;
       --gris: #1a1a1a;
     }
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -20,83 +25,118 @@
       color: var(--gris);
       scroll-behavior: smooth;
     }
+
     header {
-      background-color: var(--rosa);
-      color: white;
+      background-color: var(--fucsia);
+      color: var(--blanco);
       text-align: center;
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 2rem;
       position: relative;
       overflow: hidden;
+      padding: 2rem;
     }
+
+    .bubble {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      animation: float 12s infinite ease-in-out;
+      z-index: 0;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); opacity: 0.2; }
+      50% { transform: translateY(-50px) scale(1.2); opacity: 0.4; }
+      100% { transform: translateY(0) scale(1); opacity: 0.2; }
+    }
+
     header h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      margin: 1rem 0;
       animation: fadeDown 1s ease-out forwards;
     }
+
     header p {
-      font-size: 1.1rem;
-      font-weight: 400;
+      font-size: 1.2rem;
+      font-family: 'Playfair Display', serif;
       max-width: 700px;
       margin: 0 auto;
       animation: fadeDown 1.5s ease-out forwards;
     }
+
     .arrow {
       position: absolute;
       bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
       font-size: 2rem;
-      color: white;
       animation: bounce 1.5s infinite;
     }
+
     @keyframes bounce {
       0%, 100% { transform: translateX(-50%) translateY(0); }
       50% { transform: translateX(-50%) translateY(10px); }
     }
+
     @keyframes fadeDown {
       0% { opacity: 0; transform: translateY(-30px); }
       100% { opacity: 1; transform: translateY(0); }
     }
+
     .cta {
-      background-color: white;
-      color: var(--rosa);
-      padding: 1.2rem 2.5rem;
-      border: 2px solid white;
-      border-radius: 999px;
-      font-weight: 700;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 2rem;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      animation: fadeDown 2s ease-out forwards;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      font-size: 1.1rem;
-    }
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  background-color: var(--blanco);
+  border: 2px solid var(--fucsia);
+  color: var(--fucsia);
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
     .cta:hover {
-      background-color: var(--rosa-suave);
-      color: var(--gris);
-      transform: scale(1.05);
-    }
+  background-color: var(--fucsia);
+  color: var(--blanco);
+  transform: scale(1.05);
+}
+
     section {
       padding: 4rem 1.5rem;
       max-width: 1100px;
       margin: auto;
       position: relative;
     }
+
     h2 {
-      text-align: center;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: var(--rosa);
-      animation: fadeDown 1s ease-out forwards;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--negro);
+  font-family: 'Playfair Display', serif;
+  animation: fadeDown 1s ease-out forwards;
+}
+
+    section p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--gris);
     }
+
+    section p strong {
+      color: var(--fucsia);
+    }
+
     .beneficios {
       display: flex;
       flex-wrap: wrap;
@@ -105,11 +145,13 @@
       font-size: 1rem;
       text-align: center;
       animation: fadeDown 1.2s ease-out forwards;
+      font-family: 'Playfair Display', serif;
     }
+
     .beneficios div {
       flex: 1 1 250px;
       max-width: 300px;
-      background: #fff0f5;
+      background: rgba(247,37,133,0.05);
       border-radius: 16px;
       padding: 1.5rem;
       box-shadow: 0 6px 20px rgba(0,0,0,0.05);
@@ -117,6 +159,7 @@
       transform: translateY(20px);
       transition: all 0.6s ease;
     }
+
     .mockup img {
       width: 100%;
       max-width: 300px;
@@ -127,10 +170,12 @@
       transform: translateY(20px);
       transition: all 0.6s ease;
     }
+
     .show {
       opacity: 1 !important;
       transform: translateY(0) !important;
     }
+
     .modal {
       display: none;
       position: fixed;
@@ -142,6 +187,7 @@
       justify-content: center;
       align-items: center;
     }
+
     .modal-content {
       background-color: white;
       width: 95%;
@@ -150,11 +196,13 @@
       overflow: hidden;
       padding: 0;
     }
+
     .modal iframe {
       width: 100%;
       height: 700px;
       border: none;
     }
+
     .close {
       position: absolute;
       top: 15px;
@@ -166,6 +214,7 @@
       cursor: pointer;
       z-index: 10;
     }
+
     footer {
       text-align: center;
       background-color: #ffe4ec;
@@ -174,68 +223,73 @@
       color: var(--gris);
       border-top: 1px solid #ffc2d1;
     }
+
     @media (max-width: 600px) {
-      header h1 { font-size: 2rem; }
-      header p { font-size: 1rem; }
-      h2 { font-size: 1.5rem; }
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1.1rem; }
+      h2 { font-size: 1.6rem; }
       .cta { padding: 1rem 2rem; font-size: 1rem; }
     }
   </style>
 </head>
 <body>
-
 <header>
   <h1>La nueva era del contenido NSFW</h1>
-  <p>Descubre. Crea. Monetiza. Lo que Instagram no deja, aquí sí.</p>
+  <p><strong>Descubre</strong>. <strong>Crea</strong>. <strong>Monetiza</strong>. Lo que Instagram no deja, aquí sí.</p>
   <a href="#registro" class="cta">Pre-inscribirme</a>
   <div class="arrow">&#8595;</div>
+  <div class="bubble" style="width:60px; height:60px; top:10%; left:15%; animation-delay:0s;"></div>
+  <div class="bubble" style="width:40px; height:40px; top:20%; left:70%; animation-delay:2s;"></div>
+  <div class="bubble" style="width:100px; height:100px; top:50%; left:40%; animation-delay:4s;"></div>
+  <div class="bubble" style="width:80px; height:80px; top:70%; left:25%; animation-delay:6s;"></div>
+  <div class="bubble" style="width:50px; height:50px; top:85%; left:60%; animation-delay:8s;"></div>
 </header>
 
 <section>
-  <h2>Una comunidad sin censura para creador@s</h2>
-  <p style="text-align:center; max-width:700px; margin: 0 auto; animation: fadeDown 1.3s ease-out forwards;">
-    La nueva plataforma rosa es una alternativa española creada para ofrecerte más libertad, menos comisiones y eventos exclusivos. Gana más, conecta mejor, crea sin límites.
+  <h2>Una comunidad sin censura para <span style="color: var(--fucsia); font-style: italic;">creador@s</span></h2>
+  <p style="text-align:center; max-width:700px; margin:0 auto;">
+    La nueva plataforma rosa es una <strong>alternativa española</strong> creada para ofrecerte <strong>más libertad</strong>, <strong>menos comisiones</strong> y <strong>eventos exclusivos</strong>. Gana más, conecta mejor, crea sin límites.
   </p>
   <div style="text-align:center; margin-top:2rem;">
-    <button onclick="openModal()" class="cta">Acceso anticipado</button>
+    <a href="#registro" class="cta">Acceso anticipado</a>
   </div>
 </section>
 
 <section class="mockup">
-  <h2>Un vistazo a la plataforma</h2>
+  <h2>Un vistazo a la <span style="color: var(--fucsia); font-style: italic;">plataforma</span></h2>
   <div style="text-align:center;">
     <img class="scroll-anim" src="Imagen1.jpeg" alt="Vista previa 1" />
-<img class="scroll-anim" src="Imagen2.jpeg" alt="Vista previa 2" />
-    <p style="font-size: 0.9rem; color: gray; animation: fadeDown 1.5s ease-out forwards;">Imagen difuminada por privacidad</p>
+    <img class="scroll-anim" src="Imagen2.jpeg" alt="Vista previa 2" />
+    <p style="font-size:0.9rem; color:gray;">Imagen difuminada por privacidad</p>
   </div>
 </section>
 
 <section>
-  <h2>Beneficios del acceso anticipado</h2>
+  <h2><span style="color: var(--fucsia); font-style: italic;">Beneficios</span> del acceso anticipado</h2>
   <div class="beneficios">
-    <div class="scroll-anim"><strong>🌟 Nombre exclusivo:</strong><br />Reserva tu @usuario antes del público.</div>
-    <div class="scroll-anim"><strong>🎓 Creadora fundadora:</strong><br />Sello oficial y perfil destacado.</div>
-    <div class="scroll-anim"><strong>🎉 Eventos VIP:</strong><br />Fiestas privadas y mucho más.</div>
-    <div class="scroll-anim"><strong>💰 Comisiones más bajas:</strong><br />Gana más que en cualquier otra plataforma.</div>
-    <div class="scroll-anim"><strong>🚀 Programa Embajador@:</strong><br />Conviértete en imagen de la plataforma y disfruta de ventajas únicas.</div>
+    <div class="scroll-anim"><strong>🌟 Nombre exclusivo:</strong><br><span>Reserva tu @usuario antes del público.</span></div>
+    <div class="scroll-anim"><strong>🎓 Creadora fundadora:</strong><br><span>Sello oficial y perfil destacado.</span></div>
+    <div class="scroll-anim"><strong>🎉 Eventos VIP:</strong><br><span>Fiestas privadas y mucho más.</span></div>
+    <div class="scroll-anim"><strong>💰 Comisiones más bajas:</strong><br><span>Gana más que en cualquier otra plataforma.</span></div>
+    <div class="scroll-anim"><strong>🚀 Programa Embajador@:</strong><br><span>Conviértete en imagen de la plataforma.</span></div>
   </div>
 </section>
 
 <section id="registro" style="text-align:center;">
-  <h2>¡Quiero formar parte!</h2>
-  <p>Acceso muy limitado, pre-inscríbete hoy y asegura tus ventajas como fundadora.</p>
-  <button onclick="openModal()" class="cta">Pre-inscribirme</button>
+  <h2>¡Quiero formar <span style="color: var(--fucsia); font-style: italic;">parte</span>!</h2>
+  <p><strong>Acceso muy limitado</strong>, pre-inscríbete hoy y asegura tus ventajas como fundadora.</p>
+  <a href="#formModal" onclick="openModal()" class="cta">Pre-inscribirme</a>
 </section>
 
 <section>
-  <h2>Preguntas frecuentes</h2>
+  <h2>Preguntas <span style="color: var(--fucsia); font-style: italic;">frecuentes</span></h2>
   <div class="beneficios">
-    <div class="scroll-anim"><strong>¿Cuándo es el lanzamiento?</strong><br />Muy pronto. Las preinscripciones ya están abiertas.</div>
-    <div class="scroll-anim"><strong>¿Es sólo para +18?</strong><br />No, también para fitness, arte, estilo de vida, etc. El contenido lo decides tú!</div>
-    <div class="scroll-anim"><strong>¿Es gratis?</strong><br />Sí! Registrarse es completamente gratuito.</div>
-    <div class="scroll-anim"><strong>¿Cómo ser embajador@?</strong><br />Indica tu interés en el formulario. Recibirás los detalles.</div>
-    <div class="scroll-anim"><strong>¿Cómo se llama la plataforma?</strong><br />Es secreto. Se revelará pocos días antes del lanzamiento oficial.</div>
-    <div class="scroll-anim"><strong>¿Podré seguir creando contenido en otras plataformas?</strong><br />Sí, por supuesto.</div>
+    <div class="scroll-anim"><strong>¿Cuándo es el lanzamiento?</strong><br><span>Muy pronto. Las preinscripciones ya están abiertas.</span></div>
+    <div class="scroll-anim"><strong>¿Es sólo para +18?</strong><br><span>No, también para fitness, arte, estilo de vida.</span></div>
+    <div class="scroll-anim"><strong>¿Es gratis?</strong><br><span>¡Sí! Registrarse es completamente gratuito.</span></div>
+    <div class="scroll-anim"><strong>¿Cómo ser embajador@?</strong><br><span>Indica tu interés en el formulario y te daremos más información.</span></div>
+    <div class="scroll-anim"><strong>¿Cómo se llama la plataforma?</strong><br><span>Se revelará pocos días antes del lanzamiento.</span></div>
+    <div class="scroll-anim"><strong>¿Puedo seguir creando en otras plataformas?</strong><br><span>Sí, por supuesto.</span></div>
   </div>
 </section>
 
@@ -270,6 +324,3 @@
 
 </body>
 </html>
-
-
-
