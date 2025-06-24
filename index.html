@@ -294,11 +294,20 @@
 </section>
 
 <div id="formModal" class="modal">
-  <div class="modal-content">
+  <div class="modal-content" style="padding: 2rem; position: relative;">
     <button class="close" onclick="closeModal()">&times;</button>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeHkJ8ub_fPVs39DlPozqgdmSeuS5ojzhkHAEPn1mEYJFEsTA/viewform?embedded=true"></iframe>
+    <h2 style="text-align: center; font-family: 'Playfair Display', serif; color: var(--fucsia); margin-bottom: 1rem;">Únete a la lista de espera</h2>
+    <form action="https://formspree.io/f/mblyzeav" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+      <input type="text" name="nombre" placeholder="Tu nombre" required style="padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; font-family: 'Inter', sans-serif;">
+      <input type="email" name="email" placeholder="Tu correo electrónico" required style="padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; font-family: 'Inter', sans-serif;">
+      <input type="text" name="instagram" placeholder="Tu @ de Instagram (opcional)" style="padding: 0.8rem 1rem; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; font-family: 'Inter', sans-serif;">
+      <button type="submit" class="cta" style="margin: 1rem auto 0;">Unirme</button>
+    </form>
+    <p style="text-align:center; font-size: 0.85rem; margin-top: 1rem; color: #666;">Si dejas tu @, consideraremos tu perfil para el <strong>programa embajador@</strong>.</p>
   </div>
 </div>
+
+
 
 <footer>
   © 2025 NSFW Network — La plataforma rosa para creadoras de habla hispana.
