@@ -307,6 +307,210 @@ overflow-x: hidden; /* muy importante */
   .slide h1 { font-size: 2.2rem; }
   .slide p { font-size: 1.1rem; }
 }
+.gold-gradient {
+  background: linear-gradient(90deg, #f3e7b3, #f0c96b, #e0aa3e, #c89f2d, #f3e7b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.gold-border {
+  border: 2px solid transparent;
+  background-image: linear-gradient(#000, #000), linear-gradient(90deg, #f3e7b3, #f0c96b, #e0aa3e, #c89f2d, #f3e7b3);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(90deg, #f3e7b3, #f0c96b, #e0aa3e, #c89f2d, #f3e7b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.gold-gradient-text:hover {
+  background: #f3e7b3;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  background-clip: unset;
+}
+.gold-button {
+  padding: 1rem 2.5rem;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  border-radius: 40px;
+  border: 2px solid transparent;
+  background-image: 
+    linear-gradient(black, black),
+    linear-gradient(90deg, #f3e7b3, #f0c96b, #e0aa3e, #c89f2d, #f3e7b3);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.gold-button:hover {
+  background-image: linear-gradient(90deg, #f3e7b3, #f0c96b, #e0aa3e, #c89f2d, #f3e7b3);
+  background-clip: border-box;
+  color: black;
+  -webkit-text-fill-color: black;
+  background-color: #f3e7b3;
+}
+.gold-border-button {
+  padding: 1rem 2.5rem;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 2px solid;
+  border-image: linear-gradient(90deg, #f3e7b3, #f0c96b, #e0aa3e, #c89f2d) 1;
+  color: #f0c96b;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.gold-border-button:hover {
+  background: linear-gradient(90deg, #f3e7b3, #f0c96b, #e0aa3e, #c89f2d);
+  color: #000;
+}
+.gold-rounded-button {
+  padding: 1rem 2.5rem;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  color: #f0c96b;
+  border: 2px solid transparent;
+  background-image: 
+    linear-gradient(black, black), 
+    linear-gradient(90deg, #f3e7b3, #f0c96b, #e0aa3e, #c89f2d);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.gold-rounded-button:hover {
+  background-image: linear-gradient(90deg, #f3e7b3, #f0c96b, #e0aa3e, #c89f2d);
+  color: black;
+}
+.gold-gradient {
+  background: linear-gradient(90deg, #f3e7b3, #f0c96b, #e0aa3e, #c89f2d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+/* ===== SECCIÓN VIP ===== */
+.vip-section {
+  background-color: #ffffff;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Título principal */
+.vip-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #000;
+}
+
+/* VIP en pequeño al lado */
+.vip-gold-sup {
+  font-size: 1rem;
+  vertical-align: super;
+  background: linear-gradient(90deg, #b99309, #e6c35c, #c99c17);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Texto dorado */
+.vip-gold {
+  background: linear-gradient(90deg, #b99309, #e6c35c, #c99c17);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Descripción */
+.vip-desc {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  font-size: 1.15rem;
+  color: #2c2c2c;
+}
+
+/* Contenedor de beneficios */
+.vip-benefits {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Cajas de beneficios */
+.vip-box {
+  width: 280px;
+  background-color: #ffffff;
+  border: 2px solid #c99c17;
+  border-radius: 16px;
+  padding: 1.5rem 1.2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  font-size: 1rem;
+  color: #2c2c2c;
+}
+
+/* Título en caja */
+.vip-box strong {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+  font-size: 1.05rem;
+  background: linear-gradient(90deg, #b99309, #e6c35c, #c99c17);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Botón principal */
+.vip-button-gold {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #b99309, #e6c35c, #c99c17);
+  color: #000;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin-top: 2.5rem;
+}
+
+.vip-button-gold:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+
+
   </style>
 </head>
 <body>
@@ -324,14 +528,11 @@ overflow-x: hidden; /* muy importante */
   </div>
 
   <div class="slide slide-vip">
-    <h1 style="color: #d4af37;">Be Sweet <span style="font-size: 1rem; vertical-align: super;">VIP</span></h1>
+    <h1><span class="gold-gradient">Be Sweet</span> <span style="font-size: 1rem; vertical-align: super;" class="gold-gradient">VIP</span></h1>
     <p style="color: white;">Zona exclusiva. Altos ingresos. Solo por invitación.</p>
-    <a href="#vip" class="cta" style="border-color: #d4af37; color: #d4af37;"
-       onmouseover="this.style.background='#d4af37'; this.style.color='#000';"
-       onmouseout="this.style.background='transparent'; this.style.color='#d4af37';">Solicitar acceso VIP</a>
+<a href="#vip" class="cta gold-rounded-button">Solicitar acceso VIP</a>
     <p class="desliza-texto" style="color: white;">Desliza para más info ↓</p>
   </div>
-
   <div class="arrow">&#8595;</div>
 </header>
 
@@ -376,38 +577,38 @@ overflow-x: hidden; /* muy importante */
   </div>
 </section>
 
-<section id="vip" style="background-color: var(--blanco); padding: 4rem 1.5rem; text-align: center; font-family: 'Playfair Display', serif;">
-  <h2 style="font-size: 2.2rem; font-weight: 700;">
-    <span style="color: #000;">Be Sweet</span>
-    <span style="font-size: 1.2rem; vertical-align: super; color: #d4af37;">VIP</span>
+<section id="vip" class="vip-section">
+  <h2 class="vip-title">
+    Be Sweet <span class="vip-gold-sup">VIP</span>
   </h2>
-<p style="max-width: 800px; margin: 1.5rem auto; font-size: 1.15rem; color: #2c2c2c;">
-  Nuestra zona más exclusiva. 
-  <strong style="color: #d4af37;">Be Sweet VIP</strong> 
-  es un espacio premium dentro de la plataforma al que sólo se accede por invitación, donde las creadoras más influyentes y los fans más comprometidos interactúan en un ambiente 100% privado, elegante y de alto valor.
-</p>
-  <div class="beneficios" style="margin-top: 3rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding: 0 1rem;">
-    <div class="scroll-anim" style="width: 280px; background: #fff9e6; border: 1px solid #ffe58f; border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 30px rgba(0,0,0,0.1);">
-      <strong style="color: #d4af37;">Contenido premium:</strong><br>
+
+  <p class="vip-desc">
+    Nuestra zona más exclusiva.
+    <strong class="vip-gold">Be Sweet VIP</strong>
+    es un espacio premium dentro de la plataforma al que sólo se accede por invitación, donde las creadoras más influyentes y los fans más comprometidos interactúan en un ambiente 100% privado, elegante y de alto valor.
+  </p>
+
+  <div class="vip-benefits">
+    <div class="vip-box">
+      <strong class="vip-gold">Contenido premium:</strong>
       <span>Accede a experiencias únicas, en vivo y por encargo.</span>
     </div>
-    <div class="scroll-anim" style="width: 280px; background: #fff9e6; border: 1px solid #ffe58f; border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 30px rgba(0,0,0,0.1);">
-      <strong style="color: #d4af37;">Altos tickets:</strong><br>
+    <div class="vip-box">
+      <strong class="vip-gold">Ingresos elevados:</strong>
       <span>Monetización desde cientos hasta miles de euros por interacción.</span>
     </div>
-    <div class="scroll-anim" style="width: 280px; background: #fff9e6; border: 1px solid #ffe58f; border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 30px rgba(0,0,0,0.1);">
-      <strong style="color: #d4af37;">Privacidad y exclusividad:</strong><br>
+    <div class="vip-box">
+      <strong class="vip-gold">Privacidad y exclusividad:</strong>
       <span>Acceso limitado a usuarios verificados y seleccionados.</span>
     </div>
   </div>
-  <div style="margin-top: 3rem;">
-  <a href="#registro" class="cta" style="display: inline-block; border: 2px solid #d4af37; color: #d4af37; padding: 0.75rem 2rem; border-radius: 8px; font-weight: bold; text-decoration: none; transition: background 0.3s, color 0.3s;"
-   onmouseover="this.style.background='#d4af37'; this.style.color='#fff';"
-   onmouseout="this.style.background='transparent'; this.style.color='#d4af37';">
-  Solicitar acceso VIP
-</a>
+
+  <div class="vip-cta">
+    <a href="#registro" class="vip-button-gold">Solicitar acceso VIP</a>
   </div>
 </section>
+
+
 
 <section style="padding: 4rem 1.5rem; text-align: center; font-family: 'Playfair Display', serif;">
   <h2 style="font-size: 2rem; font-weight: 700;">
@@ -433,7 +634,6 @@ overflow-x: hidden; /* muy importante */
 
   </div>
 </section>
-
 
 
 <section id="registro" style="text-align:center;">
