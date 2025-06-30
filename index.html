@@ -235,42 +235,88 @@ overflow-x: hidden; /* muy importante */
     height: 50vh !important;
   }
 }
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.slide h1 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  margin: 1rem 0;
+  animation: fadeDown 1s ease-out forwards;
+}
+
+.slide p {
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  max-width: 700px;
+  animation: fadeDown 1.5s ease-out forwards;
+}
+
+.slide-bs {
+  background-color: var(--fucsia);
+  color: white;
+  z-index: 2;
+}
+
+.slide-vip {
+  background-color: black;
+  z-index: 1;
+}
+
+.slide.visible {
+  opacity: 1;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .slide h1 { font-size: 2.2rem; }
+  .slide p { font-size: 1.1rem; }
+}
   </style>
 </head>
 <body>
 
-<header style="width: 100vw; height: 100vh; display: flex; flex-wrap: wrap; margin: 0; padding: 0; position: relative; overflow: hidden;">
-  <!-- Be Sweet -->
-  <div style="width: 50vw; height: 100vh; background-color: var(--fucsia); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden;">
-    <h1 style="font-size: 3rem; font-family: 'Playfair Display', serif; animation: fadeDown 1s ease-out forwards;">Be Sweet</h1>
-    <p style="max-width: 400px; text-align: center; animation: fadeDown 1.3s ease-out forwards;">Descubre. Crea. Monetiza. Lo que Instagram no deja, aquí sí.</p>
-    <a href="#registro" class="cta" style="margin-top: 1.5rem;">Pre-inscribirme</a>
-
-    <!-- Burbujas -->
+<header class="hero">
+  <div class="slide slide-bs visible">
+    <h1>Be Sweet</h1>
+    <p>Descubre. Crea. Monetiza. Lo que Instagram no deja, aquí sí.</p>
+    <a href="#registro" class="cta">Pre-inscribirme</a>
+    <!-- Burbujas solo en esta vista -->
     <div class="bubble" style="width:60px; height:60px; top:15%; left:20%; animation-delay:0s;"></div>
     <div class="bubble" style="width:40px; height:40px; top:25%; left:60%; animation-delay:2s;"></div>
     <div class="bubble" style="width:100px; height:100px; top:55%; left:35%; animation-delay:4s;"></div>
   </div>
 
-  <!-- Be Sweet VIP -->
-  <div style="width: 50vw; height: 100vh; background-color: #000; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden;">
-    <h1 style="font-size: 2.8rem; font-family: 'Playfair Display', serif; color: #d4af37; animation: fadeDown 1s ease-out forwards;">
-      Be Sweet <span style="font-size: 1rem; vertical-align: super;">VIP</span>
-    </h1>
-    <p style="max-width: 400px; text-align: center; animation: fadeDown 1.3s ease-out forwards;">
-      Zona exclusiva. Altos ingresos. Solo por invitación.
-    </p>
-    <a href="#vip" class="cta" style="margin-top: 1.5rem; border: 2px solid #d4af37; color: #d4af37; background: transparent;"
+  <div class="slide slide-vip">
+    <h1 style="color: #d4af37;">Be Sweet <span style="font-size: 1rem; vertical-align: super;">VIP</span></h1>
+    <p style="color: white;">Zona exclusiva. Altos ingresos. Solo por invitación.</p>
+    <a href="#vip" class="cta" style="border-color: #d4af37; color: #d4af37;"
        onmouseover="this.style.background='#d4af37'; this.style.color='#000';"
-       onmouseout="this.style.background='transparent'; this.style.color='#d4af37';">
-       Solicitar acceso VIP
-    </a>
+       onmouseout="this.style.background='transparent'; this.style.color='#d4af37';">Solicitar acceso VIP</a>
   </div>
 
-  <!-- Flecha -->
-  <div class="arrow" style="z-index: 5;">&#8595;</div>
+  <div class="arrow">&#8595;</div>
 </header>
-
 
 
 <section>
@@ -406,6 +452,16 @@ overflow-x: hidden; /* muy importante */
     });
   }, { threshold: 0.1 });
   document.querySelectorAll('.scroll-anim').forEach(el => observer.observe(el));
+</script>
+<script>
+  let slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove('visible');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('visible');
+  }, 3000);
 </script>
 
 </body>
