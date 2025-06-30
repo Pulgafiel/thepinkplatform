@@ -24,6 +24,7 @@
       background-color: var(--blanco);
       color: var(--gris);
       scroll-behavior: smooth;
+overflow-x: hidden; /* muy importante */
     }
 
     header {
@@ -224,26 +225,50 @@
       border-top: 1px solid #ffc2d1;
     }
 
-    @media (max-width: 600px) {
-      header h1 { font-size: 2.2rem; }
-      header p { font-size: 1.1rem; }
-      h2 { font-size: 1.6rem; }
-      .cta { padding: 1rem 2rem; font-size: 1rem; }
-    }
+  @media (max-width: 768px) {
+  header > div {
+    width: 100vw !important;
+    height: 50vh;
+  }
+}
+
   </style>
 </head>
 <body>
-<header>
-  <h1>Be Sweet.</h1>
-  <p><strong>Descubre</strong>. <strong>Crea</strong>. <strong>Monetiza</strong>. Lo que Instagram no deja, aquí sí.</p>
-  <a href="#registro" class="cta">Pre-inscribirme</a>
-  <div class="arrow">&#8595;</div>
-  <div class="bubble" style="width:60px; height:60px; top:10%; left:15%; animation-delay:0s;"></div>
-  <div class="bubble" style="width:40px; height:40px; top:20%; left:70%; animation-delay:2s;"></div>
-  <div class="bubble" style="width:100px; height:100px; top:50%; left:40%; animation-delay:4s;"></div>
-  <div class="bubble" style="width:80px; height:80px; top:70%; left:25%; animation-delay:6s;"></div>
-  <div class="bubble" style="width:50px; height:50px; top:85%; left:60%; animation-delay:8s;"></div>
+
+<header style="width: 100vw; height: 100vh; display: flex; flex-wrap: wrap; margin: 0; padding: 0; position: relative; overflow: hidden;">
+  <!-- Be Sweet -->
+  <div style="width: 50vw; height: 100vh; background-color: var(--fucsia); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden;">
+    <h1 style="font-size: 3rem; font-family: 'Playfair Display', serif; animation: fadeDown 1s ease-out forwards;">Be Sweet</h1>
+    <p style="max-width: 400px; text-align: center; animation: fadeDown 1.3s ease-out forwards;">Descubre. Crea. Monetiza. Lo que Instagram no deja, aquí sí.</p>
+    <a href="#registro" class="cta" style="margin-top: 1.5rem;">Pre-inscribirme</a>
+
+    <!-- Burbujas -->
+    <div class="bubble" style="width:60px; height:60px; top:15%; left:20%; animation-delay:0s;"></div>
+    <div class="bubble" style="width:40px; height:40px; top:25%; left:60%; animation-delay:2s;"></div>
+    <div class="bubble" style="width:100px; height:100px; top:55%; left:35%; animation-delay:4s;"></div>
+  </div>
+
+  <!-- Be Sweet VIP -->
+  <div style="width: 50vw; height: 100vh; background-color: #000; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden;">
+    <h1 style="font-size: 2.8rem; font-family: 'Playfair Display', serif; color: #d4af37; animation: fadeDown 1s ease-out forwards;">
+      Be Sweet <span style="font-size: 1rem; vertical-align: super;">VIP</span>
+    </h1>
+    <p style="max-width: 400px; text-align: center; animation: fadeDown 1.3s ease-out forwards;">
+      Zona exclusiva. Altos ingresos. Solo por invitación.
+    </p>
+    <a href="#vip" class="cta" style="margin-top: 1.5rem; border: 2px solid #d4af37; color: #d4af37; background: transparent;"
+       onmouseover="this.style.background='#d4af37'; this.style.color='#000';"
+       onmouseout="this.style.background='transparent'; this.style.color='#d4af37';">
+       Solicitar VIP
+    </a>
+  </div>
+
+  <!-- Flecha -->
+  <div class="arrow" style="z-index: 5;">&#8595;</div>
 </header>
+
+
 
 <section>
   <h2>Una comunidad sin censura para <span style="color: var(--fucsia); font-style: italic;">creador@s</span></h2>
@@ -264,7 +289,7 @@
   </div>
 </section>
 
-<section style="background-color: var(--blanco); padding: 4rem 1.5rem; text-align: center; font-family: 'Playfair Display', serif;">
+<section id="vip" style="background-color: var(--blanco); padding: 4rem 1.5rem; text-align: center; font-family: 'Playfair Display', serif;">
   <h2 style="font-size: 2.2rem; font-weight: 700;">
     <span style="color: #000;">Be Sweet</span>
     <span style="font-size: 1.2rem; vertical-align: super; color: #d4af37;">VIP</span>
@@ -336,7 +361,7 @@
     <div class="scroll-anim"><strong>¿Cuándo es el lanzamiento?</strong><br><span>Muy pronto. Las preinscripciones ya están abiertas.</span></div>
     <div class="scroll-anim"><strong>¿Qué tipo de contenido puedo subir?</strong><br><span>Lo que tú quieras, tienes el control total sobre tu contenido.</span></div>
     <div class="scroll-anim"><strong>¿Es gratis?</strong><br><span>¡Sí! Registrarse es completamente gratuito.</span></div>
-    <div class="scroll-anim"><strong>¿Cómo puedo ser parte de Be Sweet VIP?</strong><br><span>Indica tu interés en el formulario y te daremos más información.</span></div>
+    <div class="scroll-anim"><strong>¿Cómo puedo ser parte de Be SWeet VIP?</strong><br><span>Indica tu interés en el formulario y te daremos más información.</span></div>
     <div class="scroll-anim"><strong>¿Cómo se llama la plataforma?</strong><br><span>Be Sweet.</span></div>
     <div class="scroll-anim"><strong>¿Puedo seguir creando en otras plataformas?</strong><br><span>Sí, por supuesto.</span></div>
   </div>
