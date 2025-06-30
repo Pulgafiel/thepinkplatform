@@ -311,12 +311,13 @@ overflow-x: hidden; /* muy importante */
 </head>
 <body>
 
+<!-- Header actualizado con aviso de deslizamiento -->
 <header class="hero">
   <div class="slide slide-bs visible">
     <h1>Be Sweet</h1>
     <p>Descubre. Crea. Monetiza. Lo que Instagram no deja, aquí sí.</p>
     <a href="#registro" class="cta">Pre-inscribirme</a>
-    <!-- Burbujas solo en esta vista -->
+    <p class="desliza-texto">Desliza para más info ↓</p>
     <div class="bubble" style="width:60px; height:60px; top:15%; left:20%; animation-delay:0s;"></div>
     <div class="bubble" style="width:40px; height:40px; top:25%; left:60%; animation-delay:2s;"></div>
     <div class="bubble" style="width:100px; height:100px; top:55%; left:35%; animation-delay:4s;"></div>
@@ -328,10 +329,32 @@ overflow-x: hidden; /* muy importante */
     <a href="#vip" class="cta" style="border-color: #d4af37; color: #d4af37;"
        onmouseover="this.style.background='#d4af37'; this.style.color='#000';"
        onmouseout="this.style.background='transparent'; this.style.color='#d4af37';">Solicitar acceso VIP</a>
+    <p class="desliza-texto" style="color: white;">Desliza para más info ↓</p>
   </div>
 
   <div class="arrow">&#8595;</div>
 </header>
+
+<style>
+  .desliza-texto {
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    color: rgba(255, 255, 255, 0.85);
+    animation: fadeDown 2s infinite;
+  }
+</style>
+
+<script>
+  let slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove('visible');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('visible');
+  }, 3000);
+</script>
+
 
 
 <section>
