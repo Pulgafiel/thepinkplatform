@@ -225,13 +225,16 @@ overflow-x: hidden; /* muy importante */
       border-top: 1px solid #ffc2d1;
     }
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  header {
+    flex-direction: column !important;
+  }
+
   header > div {
     width: 100vw !important;
-    height: 50vh;
+    height: 50vh !important;
   }
 }
-
   </style>
 </head>
 <body>
@@ -260,7 +263,7 @@ overflow-x: hidden; /* muy importante */
     <a href="#vip" class="cta" style="margin-top: 1.5rem; border: 2px solid #d4af37; color: #d4af37; background: transparent;"
        onmouseover="this.style.background='#d4af37'; this.style.color='#000';"
        onmouseout="this.style.background='transparent'; this.style.color='#d4af37';">
-       Solicitar VIP
+       Solicitar acceso VIP
     </a>
   </div>
 
