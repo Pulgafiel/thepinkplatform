@@ -650,61 +650,116 @@ overflow-x: hidden; /* muy importante */
     Nuestras <span style="color: #F726A3; font-style: italic;">nuevas funciones</span>
   </h2>
 
-  <div id="carousel" style="max-width: 320px; margin: 0 auto; overflow: hidden; border-radius: 16px; position: relative;">
-    <div id="carousel-inner" style="display: flex; transition: transform 0.5s ease-in-out; width: 100%;">
+  <div style="position: relative; max-width: 320px; margin: 0 auto;">
+    <!-- Botón izquierda -->
+    <button id="prevBtn" style="position: absolute; left: -1.5rem; top: 50%; transform: translateY(-50%); font-size: 1.5rem; background: none; border: none; color: #aaa; cursor: pointer;">‹</button>
 
-      <!-- Slide 1 -->
-      <div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
-        <strong style="color: #F726A3; font-size: 1.2rem; display: block; font-family: 'Playfair Display', serif;">Chat aleatorio</strong>
-        <p style="font-family: 'Playfair Display', serif;">Conexión tipo Omegle con creadoras disponibles, al azar.</p>
-        <img src="Imagen6.png" alt="Chat aleatorio" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
+    <!-- Carrusel -->
+    <div id="carousel" style="overflow: hidden; border-radius: 16px;">
+      <div id="carousel-inner" style="display: flex; transition: transform 0.5s ease-in-out; width: 100%;">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
+          <strong style="color: #000000; font-size: 1.2rem; display: block; font-weight: bold; font-family: 'Playfair Display', serif;">Chat aleatorio</strong>
+          <p style="font-family: 'Playfair Display', serif;">Conexión tipo Omegle con creadoras disponibles, al azar.</p>
+          <img src="Imagen6.png" alt="Chat aleatorio" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
+          <strong style="color: #000000; font-size: 1.2rem; display: block; font-weight: bold; font-family: 'Playfair Display', serif;">Tienda personal</strong>
+          <p style="font-family: 'Playfair Display', serif;">Venta de lencería y juguetes exclusivos con pujas y precios altos.</p>
+          <img src="Imagen4.png" alt="Tienda personal" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
+          <strong style="color: #000000; font-size: 1.2rem; display: block; font-weight: bold; font-family: 'Playfair Display', serif;">Rankings semanales</strong>
+          <p style="font-family: 'Playfair Display', serif;">Top creadoras por país, categoría y nivel global. Actualizado cada semana.</p>
+          <img src="Imagen7.png" alt="Rankings semanales" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
+          <strong style="color: #000000; font-size: 1.2rem; display: block; font-weight: bold; font-family: 'Playfair Display', serif;">Requests públicos</strong>
+          <p style="font-family: 'Playfair Display', serif;">Los usuarios piden contenido personalizado y reciben propuestas.</p>
+          <img src="Imagen9.png" alt="Requests públicos" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
+          <strong style="color: #000000; font-size: 1.2rem; display: block; font-weight: bold; font-family: 'Playfair Display', serif;">Videollamadas pagadas</strong>
+          <p style="font-family: 'Playfair Display', serif;">Agenda sesiones privadas directamente con las creadoras.</p>
+          <img src="Imagen8.png" alt="Videollamadas pagadas" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
+        </div>
+
+<!-- Slide 6: Zona VIP -->
+<div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
+  <strong style="color: #000000; font-size: 1.2rem; display: block; font-weight: bold; font-family: 'Playfair Display', serif;">Zona VIP</strong>
+  <p style="font-family: 'Playfair Display', serif;">
+    Acceso exclusivo para miembros premium: contenido 1:1, eventos privados y estética de lujo.
+  </p>
+  <img src="Imagen10.png" alt="Zona VIP" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
+</div>
+
       </div>
-
-      <!-- Slide 2 -->
-      <div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
-        <strong style="color: #F726A3; font-size: 1.2rem; display: block; font-family: 'Playfair Display', serif;">Tienda personal</strong>
-        <p style="font-family: 'Playfair Display', serif;">Venta de lencería y juguetes exclusivos con pujas y precios altos.</p>
-        <img src="Imagen4.png" alt="Tienda personal" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
-        <strong style="color: #F726A3; font-size: 1.2rem; display: block; font-family: 'Playfair Display', serif;">Rankings semanales</strong>
-        <p style="font-family: 'Playfair Display', serif;">Top creadoras por país, categoría y nivel global. Actualizado cada semana.</p>
-        <img src="Imagen7.png" alt="Rankings semanales" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
-        <strong style="color: #F726A3; font-size: 1.2rem; display: block; font-family: 'Playfair Display', serif;">Requests públicos</strong>
-        <p style="font-family: 'Playfair Display', serif;">Los usuarios piden contenido personalizado y reciben propuestas.</p>
-        <img src="Imagen9.png" alt="Requests públicos" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
-      </div>
-
-      <!-- Slide 5 -->
-      <div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
-        <strong style="color: #F726A3; font-size: 1.2rem; display: block; font-family: 'Playfair Display', serif;">Videollamadas pagadas</strong>
-        <p style="font-family: 'Playfair Display', serif;">Agenda sesiones privadas directamente con las creadoras.</p>
-        <img src="Imagen8.png" alt="Videollamadas pagadas" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
-      </div>
-
     </div>
+
+    <!-- Botón derecha -->
+    <button id="nextBtn" style="position: absolute; right: -1.5rem; top: 50%; transform: translateY(-50%); font-size: 1.5rem; background: none; border: none; color: #aaa; cursor: pointer;">›</button>
   </div>
 
   <script>
     const carouselInner = document.getElementById('carousel-inner');
     const totalSlides = document.querySelectorAll('.carousel-item').length;
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
     let currentIndex = 0;
+    let autoSlide = true;
+    let autoInterval;
 
     function showSlide(index) {
       const offset = -index * 100;
       carouselInner.style.transform = `translateX(${offset}%)`;
     }
 
-    setInterval(() => {
+    function nextSlide() {
       currentIndex = (currentIndex + 1) % totalSlides;
       showSlide(currentIndex);
-    }, 2000);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    }
+
+    function stopAutoSlide() {
+      autoSlide = false;
+      clearInterval(autoInterval);
+    }
+
+    // Botones manuales
+    nextBtn.addEventListener('click', () => {
+      stopAutoSlide();
+      nextSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      stopAutoSlide();
+      prevSlide();
+    });
+
+    // Activar autoSlide al cargar
+    function startAutoSlide() {
+      autoInterval = setInterval(() => {
+        if (autoSlide) {
+          nextSlide();
+        }
+      }, 2000);
+    }
+
+    showSlide(currentIndex);
+    startAutoSlide();
   </script>
 </section>
 
