@@ -586,7 +586,7 @@ overflow-x: hidden; /* muy importante */
 <!-- Header actualizado con aviso de deslizamiento -->
 <header class="hero">
   <div class="slide slide-bs visible">
-    <h1>Be Sweet</h1>
+    <h1>BeSweet</h1>
     <p>Descubre. Crea. Monetiza. Lo que Instagram no deja, aquí sí.</p>
     <a href="#registro" class="cta">Pre-inscribirme</a>
     <p class="desliza-texto">Desliza para más info ↓</p>
@@ -596,7 +596,7 @@ overflow-x: hidden; /* muy importante */
   </div>
 
   <div class="slide slide-vip">
-    <h1><span class="gold-gradient">Be Sweet</span> <span style="font-size: 1rem; vertical-align: super;" class="gold-gradient">VIP</span></h1>
+    <h1><span class="gold-gradient">BeSweet</span> <span style="font-size: 1rem; vertical-align: super;" class="gold-gradient">VIP</span></h1>
     <p style="color: white;">Zona exclusiva. Altos ingresos. Solo por invitación.</p>
 <a href="#vip" class="cta gold-rounded-button">Solicitar acceso VIP</a>
     <p class="desliza-texto" style="color: white;">Desliza para más info ↓</p>
@@ -645,43 +645,69 @@ overflow-x: hidden; /* muy importante */
   </div>
 </section>
 
-<section id="nuevas-funciones" style="padding: 4rem 1.5rem; background-color: #ffffff;">
-  <h2 style="text-align: center; font-size: 2rem; font-family: 'Playfair Display', serif;">
-    Nuestras <span style="color: var(--fucsia); font-style: italic;">nuevas funciones</span>
+<section id="nuevas-funciones" style="padding: 4rem 1.5rem 2rem 1.5rem; background-color: #ffffff;">
+  <h2 style="text-align: center; font-size: 2rem; font-family: 'Playfair Display', serif; margin-bottom: 2rem;">
+    Nuestras <span style="color: #F726A3; font-style: italic;">nuevas funciones</span>
   </h2>
 
-  <div class="beneficios" style="margin-top: 3rem;">
-    <div class="scroll-anim" style="flex: 1 1 260px; background: #ffffff; border: 2px solid var(--fucsia); border-radius: 16px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03); min-width: 240px;">
-      <strong style="color: var(--fucsia);">✦ Chat aleatorio</strong><br>
-      Conexión tipo Omegle con creadoras disponibles, al azar.
-    </div>
+  <div id="carousel" style="max-width: 320px; margin: 0 auto; overflow: hidden; border-radius: 16px; position: relative;">
+    <div id="carousel-inner" style="display: flex; transition: transform 0.5s ease-in-out; width: 100%;">
 
-    <div class="scroll-anim" style="flex: 1 1 260px; background: #ffffff; border: 2px solid var(--fucsia); border-radius: 16px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03); min-width: 240px;">
-      <strong style="color: var(--fucsia);">✦ Tienda personal en el perfil</strong><br>
-      Las creadoras podrán vender artículos físicos directamente desde su perfil.
-    </div>
+      <!-- Slide 1 -->
+      <div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
+        <strong style="color: #F726A3; font-size: 1.2rem; display: block; font-family: 'Playfair Display', serif;">Chat aleatorio</strong>
+        <p style="font-family: 'Playfair Display', serif;">Conexión tipo Omegle con creadoras disponibles, al azar.</p>
+        <img src="Imagen6.png" alt="Chat aleatorio" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
+      </div>
 
-    <div class="scroll-anim" style="flex: 1 1 260px; background: #ffffff; border: 2px solid var(--fucsia); border-radius: 16px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03); min-width: 240px;">
-      <strong style="color: var(--fucsia);">✦ Compras rápidas o pujas</strong><br>
-      Artículos limitados: el más rápido se lo lleva o se activan subastas internas.
-    </div>
-    <div class="scroll-anim" style="flex: 1 1 260px; background: #ffffff; border: 2px solid var(--fucsia); border-radius: 16px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03); min-width: 240px;">
-      <strong style="color: var(--fucsia);">✦ Sistema de reputación</strong><br>
-      Estadísticas visibles de gasto e interacción para que las creadoras puedan valorar a sus fans.
-    </div>
+      <!-- Slide 2 -->
+      <div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
+        <strong style="color: #F726A3; font-size: 1.2rem; display: block; font-family: 'Playfair Display', serif;">Tienda personal</strong>
+        <p style="font-family: 'Playfair Display', serif;">Venta de lencería y juguetes exclusivos con pujas y precios altos.</p>
+        <img src="Imagen4.png" alt="Tienda personal" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
+      </div>
 
-    <div class="scroll-anim" style="flex: 1 1 260px; background: #ffffff; border: 2px solid var(--fucsia); border-radius: 16px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03); min-width: 240px;">
-      <strong style="color: var(--fucsia);">✦ Requests públicos</strong><br>
-      Los usuarios pueden publicar peticiones de contenido personalizado y recibir propuestas.
-    </div>
+      <!-- Slide 3 -->
+      <div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
+        <strong style="color: #F726A3; font-size: 1.2rem; display: block; font-family: 'Playfair Display', serif;">Rankings semanales</strong>
+        <p style="font-family: 'Playfair Display', serif;">Top creadoras por país, categoría y nivel global. Actualizado cada semana.</p>
+        <img src="Imagen7.png" alt="Rankings semanales" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
+      </div>
 
-    <div class="scroll-anim" style="flex: 1 1 260px; background: #ffffff; border: 2px solid var(--fucsia); border-radius: 16px; padding: 1.5rem; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03); min-width: 240px;">
-      <strong style="color: var(--fucsia);">✦ Videollamadas pagadas</strong><br>
-      Agenda sesiones privadas directamente desde el perfil de la creadora.
-    </div>
+      <!-- Slide 4 -->
+      <div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
+        <strong style="color: #F726A3; font-size: 1.2rem; display: block; font-family: 'Playfair Display', serif;">Requests públicos</strong>
+        <p style="font-family: 'Playfair Display', serif;">Los usuarios piden contenido personalizado y reciben propuestas.</p>
+        <img src="Imagen9.png" alt="Requests públicos" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
+      </div>
 
+      <!-- Slide 5 -->
+      <div class="carousel-item" style="flex: 0 0 100%; text-align: center; padding: 1rem;">
+        <strong style="color: #F726A3; font-size: 1.2rem; display: block; font-family: 'Playfair Display', serif;">Videollamadas pagadas</strong>
+        <p style="font-family: 'Playfair Display', serif;">Agenda sesiones privadas directamente con las creadoras.</p>
+        <img src="Imagen8.png" alt="Videollamadas pagadas" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
+      </div>
+
+    </div>
   </div>
+
+  <script>
+    const carouselInner = document.getElementById('carousel-inner');
+    const totalSlides = document.querySelectorAll('.carousel-item').length;
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const offset = -index * 100;
+      carouselInner.style.transform = `translateX(${offset}%)`;
+    }
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }, 2000);
+  </script>
 </section>
+
 
 
 <section id="vip" class="vip-section">
